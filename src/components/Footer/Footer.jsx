@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.info}>
           <div className={styles.logo}>
-            <img src="/public/logolaberdi.jpg" alt="Logo" className="logoImg" />pw
+            <img src="/fotos/logolaberdi.jpg" alt="Logo" className="logoImg" />pw
             <div>
               <span className={styles.title}>Municipalidad</span>
               <span className={styles.subtitle}>Juan Bautista Alberdi, Tucumán</span>

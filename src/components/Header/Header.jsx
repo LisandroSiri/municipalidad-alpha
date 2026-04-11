@@ -40,7 +40,7 @@ const Header = () => {
       <div className={styles.container}>
         <div className={styles.logoContainer}>
           <Link to="/" className={styles.logo}>
-            <img src="/public/logolaberdi.jpg" alt="Logo" className="logoImg" />
+            <img src="/fotos/logolaberdi.jpg" alt="Logo" className="logoImg" />
             <div className={styles.logoText}>
               <span className={styles.title}>Municipalidad de</span>
               <span className={styles.title}>Juan Bautista Alberdi</span>
