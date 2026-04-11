@@ -1,0 +1,235 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  padding: 1.5rem 0;
+
+  &.autoridadesHeader {
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+  }
+}
+
+
+
+.header.scrolled {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--glass-border);
+
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-primary);
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-primary);
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  gap: 2rem;
+
+  li a {
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.menuButton {
+  display: none;
+  color: var(--color-text);
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+    position: relative;
+    z-index: 1002; // por encima del menú
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: var(--glass-bg); // 👈 CAMBIÁ ACÁ EL COLOR
+    backdrop-filter: blur(16px); // efecto glass
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    padding-top: 5rem;
+    z-index: 1001;
+
+    &.open {
+      right: 0;
+    }
+  }
+
+  .navList {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    font-size: 1.125rem;
+
+    li a {
+      color: white; // 👈 texto blanco para contraste
+      font-weight: 500;
+      display: block;
+      padding: 0.5rem 0;
+
+      &:hover {
+        color: var(--color-primary);
+        transform: translateX(5px);
+        transition: all 0.2s ease;
+      }
+    }
+  }
+}
+
+
+.dropdown {
+  position: relative;
+
+  .dropdownBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+
+    svg {
+      transition: transform 0.3s ease;
+
+      &.rotated {
+        transform: rotate(180deg);
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 0.5rem 0;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--glass-border);
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    li {
+      a {
+        display: block;
+        padding: 0.6rem 1.2rem;
+        color: var(--color-text);
+        font-size: 0.9rem;
+
+        &:hover {
+          background: rgba(0, 91, 181, 0.1);
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+    .dropdownBtn {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .dropdownMenu {
+      position: static;
+      background: rgba(0, 0, 0, 0.05);
+      backdrop-filter: none;
+      box-shadow: none;
+      padding-left: 1rem;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      display: none;
+
+      &.open {
+        transform: none;
+        display: block;
+      }
+    }
+  }
+}

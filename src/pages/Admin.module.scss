@@ -1,0 +1,265 @@
+.adminPane {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f7fafc;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: #2d3748;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeader {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid #4a5568;
+  
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+.sidebarNav {
+  flex: 1;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+  button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #a0aec0;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    
+    &:hover {
+      color: white;
+      background-color: #4a5568;
+    }
+    
+    &.active {
+      color: white;
+      background-color: var(--color-primary);
+    }
+  }
+}
+
+.sidebarFooter {
+  padding: 1.5rem 1rem;
+  border-top: 1px solid #4a5568;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #fc8181;
+  width: 100%;
+  padding: 0.75rem 1rem;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  
+  h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #2d3748;
+  }
+}
+
+.addBtn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  
+  &:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+  }
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    color: #718096;
+    gap: 1rem;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.tableWrapper {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+    th {
+        background: #f7fafc;
+        padding: 1rem;
+        font-weight: 600;
+        color: #4a5568;
+        border-bottom: 1px solid #edf2f7;
+    }
+
+    td {
+        padding: 1rem;
+        border-bottom: 1px solid #edf2f7;
+        color: #2d3748;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.editBtn, .delBtn {
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+    
+    &:hover {
+        background: #f7fafc;
+    }
+}
+
+.editBtn { color: var(--color-primary); }
+.delBtn { color: #f56565; }
+
+.form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+    
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #4a5568;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        font-family: inherit;
+        
+        &:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+        }
+    }
+
+    textarea {
+        height: 120px;
+        resize: vertical;
+    }
+}
+
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.cancelBtn {
+    padding: 0.6rem 1.2rem;
+    color: #718096;
+    font-weight: 600;
+    
+    &:hover { color: #2d3748; }
+}
+
+.submitBtn {
+    padding: 0.6rem 1.5rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    
+    &:hover { filter: brightness(1.1); }
+}
+
+.dashboardStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.statCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  
+  h3 {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #2d3748;
+  }
+}
+
+.tabContent {
+    p {
+        color: #718096;
+    }
+}

@@ -1,0 +1,114 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "title": "Trabajos de mejora y mantenimiento en la ciudad 🚧🌿",
+      "date": "2026-04-03",
+      "summary": "Mediante el trabajo conjunto entre el área de Servicios Públicos y el área de Obras Públicas, se continúan desarrollando tareas en distintos puntos de la ciudad.",
+      "image": "https://scontent.ftuc1-2.fna.fbcdn.net/v/t39.30808-6/665845934_1392131782953029_8112436450856181905_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=pMhmnSnnPncQ7kNvwFhHn5c&_nc_oc=AdrKasMlD0ZurYdfCd05zZPeDcU0g9HC1B_9OPxubX2AEDVgOX77pbxi0ZCrz9kuwdQ&_nc_zt=23&_nc_ht=scontent.ftuc1-2.fna&_nc_gid=px53QJHCyORhlTBSRkTgzg&_nc_ss=7a3a8&oh=00_Af2WDfdEFpWxCvmrjP420oAzX2pCz2yVnrSH0v7dyPvgpg&oe=69D74535",
+      "secciones": [
+        {
+          "tipo": "texto",
+          "contenido": "La Municipalidad continúa con los trabajos de mejora y mantenimiento en diferentes puntos de la ciudad, con el objetivo de garantizar espacios más seguros y agradables para todos los vecinos."
+        },
+        {
+          "tipo": "imagen",
+          "url": "https://scontent.ftuc1-2.fna.fbcdn.net/v/t39.30808-6/665845934_1392131782953029_8112436450856181905_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=pMhmnSnnPncQ7kNvwFhHn5c&_nc_oc=AdrKasMlD0ZurYdfCd05zZPeDcU0g9HC1B_9OPxubX2AEDVgOX77pbxi0ZCrz9kuwdQ&_nc_zt=23&_nc_ht=scontent.ftuc1-2.fna&_nc_gid=px53QJHCyORhlTBSRkTgzg&_nc_ss=7a3a8&oh=00_Af2WDfdEFpWxCvmrjP420oAzX2pCz2yVnrSH0v7dyPvgpg&oe=69D74535",
+          "alt": "Trabajos de mejora en la ciudad"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Las cuadrillas de Servicios Públicos están realizando tareas de bacheo, limpieza de canales y mantenimiento de espacios verdes. Por su parte, Obras Públicas avanza en la reparación de veredas y mejora del alumbrado."
+        },
+        {
+          "tipo": "imagen",
+          "url": "https://i.blogs.es/15dbbe/pasos-lograr-fotos-principiante-salten-nivel-superior-01/1366_2000.jpg",
+          "alt": "Cuadrilla trabajando"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Invitamos a los vecinos a circular con precaución en las zonas intervenidas y a colaborar manteniendo limpios los espacios públicos. Los trabajos continuarán durante toda la semana."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Nuevo centro de atención ciudadana",
+      "date": "2026-04-01",
+      "summary": "Inauguramos un espacio moderno para agilizar todos tus trámites online y presenciales.",
+      "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "secciones": [
+        {
+          "tipo": "texto",
+          "contenido": "El nuevo Centro de Atención Ciudadana está ubicado en calle Belgrano 350, funcionando de 8 a 18 horas sin corte al mediodía."
+        },
+        {
+          "tipo": "imagen",
+          "url": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          "alt": "Centro de atención ciudadana"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Podés realizar todo tipo de trámites: pago de tasas, solicitud de turnos, reclamos y más. Además, contamos con terminales de autogestión para agilizar las consultas simples."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Campaña de vacunación antigripal 2026",
+      "date": "2026-03-28",
+      "summary": "El área de salud municipal lanza la campaña anual en todos los CAPS de la ciudad.",
+      "image": "https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "secciones": [
+        {
+          "tipo": "texto",
+          "contenido": "Desde el 1 de abril hasta el 30 de mayo, todos los CAPS de la ciudad aplicarán la vacuna antigripal gratuita para grupos de riesgo."
+        },
+        {
+          "tipo": "imagen",
+          "url": "https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          "alt": "Campaña de vacunación"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Podés acercarte sin turno previo de 8 a 14 horas. Llevar DNI y carnet de vacunación si lo tenés."
+        },
+        {
+          "tipo": "imagen",
+          "url": "https://ejemplo.com/vacunacion2.jpg",
+          "alt": "Vacunación en CAPS"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Protegé tu salud y la de tu familia. La vacuna está indicada para mayores de 65 años, embarazadas, niños de 6 a 24 meses y personal de salud."
+        }
+      ]
+    }
+  ],
+  "servicios": [
+    {
+      "id": 1,
+      "name": "Pago de Tasas",
+      "icon": "CreditCard",
+      "description": "Pagá tus tributos municipales sin salir de casa."
+    },
+    {
+      "id": 2,
+      "name": "Turnos Salud",
+      "icon": "CalendarHeart",
+      "description": "Solicitá turnos para los Centros de Atención Primaria."
+    },
+    {
+      "id": 3,
+      "name": "Licencia de Conducir",
+      "icon": "IdCard",
+      "description": "Requisitos y turnos para renovación o primera vez."
+    },
+    {
+      "id": 4,
+      "name": "Reclamos y Denuncias",
+      "icon": "MessageSquareWarning",
+      "description": "Envíanos tu reporte y hacé el seguimiento online."
+    }
+  ]
+}

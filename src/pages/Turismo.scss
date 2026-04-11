@@ -1,0 +1,198 @@
+.turismo-page {
+    min-height: 100vh;
+
+    // Hero Section
+    .turismo-hero {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        min-height: 400px;
+        background-image: url('/fotos/dique.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 80px;
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 0 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+
+            .hero-title {
+                font-size: clamp(2.5rem, 6vw, 4rem);
+                font-weight: 800;
+                margin-bottom: 1rem;
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .hero-subtitle {
+                font-size: clamp(1.2rem, 3vw, 1.8rem);
+                font-weight: 600;
+                margin-bottom: 1rem;
+                opacity: 0.95;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                max-width: 600px;
+                margin: 0 auto;
+                opacity: 0.85;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    // Contenido
+    .turismo-content {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+        padding: 4rem 0;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 700;
+            text-align: center;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #4a4a6a;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    // Grid de lugares
+    .lugares-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    .lugar-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.98);
+
+            .lugar-imagen {
+                transform: scale(1.05);
+            }
+        }
+
+        .imagen-container {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+            .lugar-imagen {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+        }
+
+        .lugar-info {
+            padding: 1.5rem;
+
+            .lugar-nombre {
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: #1a1a2e;
+                margin-bottom: 0.5rem;
+            }
+
+            .lugar-ubicacion {
+                font-size: 0.85rem;
+                color: #005bb5;
+                font-weight: 600;
+                margin-bottom: 0.75rem;
+            }
+
+            .lugar-descripcion {
+                font-size: 0.9rem;
+                color: #4a4a6a;
+                line-height: 1.5;
+                margin-bottom: 1rem;
+            }
+
+            .lugar-detalles {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding-top: 0.75rem;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+                .detalle {
+                    font-size: 0.75rem;
+                    color: #666;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.25rem;
+                }
+            }
+        }
+    }
+
+    // Responsive
+    @media (max-width: 768px) {
+        .turismo-hero {
+            height: 50vh;
+            min-height: 350px;
+            background-attachment: scroll;
+
+            .hero-content .hero-description {
+                font-size: 0.9rem;
+            }
+        }
+
+        .turismo-content {
+            padding: 2rem 0;
+        }
+
+        .lugares-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .lugar-card {
+            .imagen-container {
+                height: 200px;
+            }
+        }
+    }
+}
