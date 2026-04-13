@@ -1,12 +1,13 @@
 import './Turismo.scss';
+import { MapPin, Clock, Mail } from 'lucide-react';
 
 const lugaresData = [
     {
         id: 1,
-        nombre: "Plaza Principal 25 de Mayo",
-        ubicacion: "Centro de la ciudad",
-        descripcion: "El corazón de la ciudad, rodeada de árboles centenarios y edificios históricos. Ideal para disfrutar de tardes tranquilas y eventos culturales.",
-        imagen: "/fotos/plaza.jpg",
+        nombre: "Dique Escaba",
+        ubicacion: "Escaba, Tucumán",
+        descripcion: "El Dique Escaba, ubicado en el sur de la provincia de Tucumán, Argentina, es un importante embalse hidroeléctrico y atractivo turístico natural, conocido por estar inmerso en las yungas tucumanas y albergar la colonia de murciélagos más grande de Sudamérica en su vertedero.",
+        imagen: "/fotos/diqueescaba.jpg",
         horario: "Abierto 24 horas",
         contacto: "turismo@municipio.gob.ar"
     },
@@ -18,43 +19,8 @@ const lugaresData = [
         imagen: "/fotos/museo.jpg",
         horario: "Martes a Domingo de 9 a 18 hs",
         contacto: "museo@municipio.gob.ar"
-    },
-    {
-        id: 3,
-        nombre: "Parque Natural Los Ceibos",
-        ubicacion: "Ruta Provincial 302, km 5",
-        descripcion: "Espacio verde con senderos, laguna, zona de picnic y gran variedad de flora y fauna autóctona.",
-        imagen: "/fotos/parque.jpg",
-        horario: "Lunes a Domingo de 8 a 20 hs",
-        contacto: "parque@municipio.gob.ar"
-    },
-    {
-        id: 4,
-        nombre: "Iglesia Nuestra Señora del Rosario",
-        ubicacion: "Belgrano 789",
-        descripcion: "Construcción del siglo XIX con arquitectura colonial, uno de los puntos más emblemáticos de la ciudad.",
-        imagen: "/fotos/iglesia.jpg",
-        horario: "Lunes a Domingo de 8 a 19 hs",
-        contacto: "iglesia@municipio.gob.ar"
-    },
-    {
-        id: 5,
-        nombre: "Feria Artesanal",
-        ubicacion: "Paseo del Sol, Av. Libertad",
-        descripcion: "Encuentro de artesanos locales donde podés encontrar productos regionales, artesanías y comidas típicas.",
-        imagen: "/fotos/feria.jpg",
-        horario: "Sábados y Domingos de 10 a 20 hs",
-        contacto: "feria@municipio.gob.ar"
-    },
-    {
-        id: 6,
-        nombre: "Balneario Municipal El Dique",
-        ubicacion: "Acceso Sur, km 8",
-        descripcion: "Espacio con playas de arena, quinchos, parrillas y zonas de recreación para toda la familia.",
-        imagen: "/fotos/balneario.jpg",
-        horario: "Temporada: Noviembre a Marzo, 9 a 19 hs",
-        contacto: "balneario@municipio.gob.ar"
     }
+
 ];
 
 export default function Turismo() {
@@ -94,12 +60,12 @@ export default function Turismo() {
                                 <div className="lugar-info">
                                     <h3 className="lugar-nombre">{lugar.nombre}</h3>
                                     <p className="lugar-ubicacion">
-                                        📍 {lugar.ubicacion}
+                                        <MapPin size={20} /> {lugar.ubicacion}
                                     </p>
                                     <p className="lugar-descripcion">{lugar.descripcion}</p>
                                     <div className="lugar-detalles">
-                                        <span className="detalle">🕒 {lugar.horario}</span>
-                                        <span className="detalle">📧 {lugar.contacto}</span>
+                                        <span className="detalle"><Clock size={20} /> {lugar.horario}</span>
+                                        <span className="detalle"><Mail size={20} /> {lugar.contacto}</span>
                                     </div>
                                 </div>
                             </div>
